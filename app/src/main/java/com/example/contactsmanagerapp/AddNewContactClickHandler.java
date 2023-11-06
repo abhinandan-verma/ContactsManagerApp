@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.lifecycle.ViewModelProvider;
-
 public class AddNewContactClickHandler {
 
     Contacts contact;
@@ -24,8 +22,8 @@ public class AddNewContactClickHandler {
             Toast.makeText(context, "This Field can't be Empty", Toast.LENGTH_SHORT).show();
         }else{
             Intent i = new Intent(context, MainActivity.class);
-//            i.putExtra("Name",contact.getName());
-//            i.putExtra("Email",contact.getEmail());
+           i.putExtra("Name",contact.getName());
+           i.putExtra("Email",contact.getEmail());
 
            Contacts c = new Contacts(
                    contact.getName(),
